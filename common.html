@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everland</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                var video=document.getElementById("vi").clientHeight;
+                var height=video-100;
+                var scroll=$(window).scrollTop();
+                if(scroll>height){
+                    $("#container").css("background","#fff");
+                    $(".mainmenu>li>a").css("color","#000");
+                    $(".sub>li>a").css("color","#000");
+                    $(".sub").css("background","#fff");
+                    $("#search>div a").css("color","#000");
+
+
+                }else{
+                    $("#container").css("background","none");
+                    $(".mainmenu>li>a").css("color","#fff");
+                    $(".sub>li>a").css("color","#fff");
+                    $(".sub").css("background","none");
+                    $("#search>div a").css("color","#fff");
+
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+<div id="video">
+    <video muted  loop id="vi"><source src="img/video.mp4"></video>
+    <div id="fix">
+        <div id="container">
+            <div id="logo"><img src="img/logo.png" alt="as"></div>
+            <nav>
+                <ul class="mainmenu">
+                    <li><a href="#">이용정보</a>
+                        <ul class="sub">
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">프로모션</a>
+                        <ul class="sub">
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">즐길거리</a>
+                        <ul class="sub">
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">멤버십</a>
+                        <ul class="sub">
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">소통공간</a>
+                        <ul class="sub">
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div id="search">
+                <div id="searchone"><a href="#">온라인 예매</a></div>
+                <div id="searchtwo"><a href="#">로그인</a></div>
+                <div id="searchthree"><a href="#">회원가입</a></div>
+                <div id="searchfour"><img src="img/search.png" alt=""></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 푸터ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+<footer>
+    <div class="foot_img">
+        <img src="img/twitter.png" alt="">
+        <img src="img/facebook.png" alt="">
+        <img src="img/instagram.png" alt="">
+    </div>
+    <div class="foot_container">
+        <div class="foot_logo">
+            <a href="index.html"><img src="img/logo.png" alt="" width="230" height="230" ></a>
+        </div>
+    <div class="link_up">
+        <h2>Link</h2>
+            <div class="link">
+                <a href="#"><p>이용정보</p></a>
+                <a href="#"><p>요금&프로모션</p></a>
+                <a href="#"><p>즐길거리</p></a>
+                <a href="#"><p>멤버십</p></a>
+                <a href="#"><p>에버랜드 더 알아보기</p></a>
+            </div>
+    </div>
+    <div class="information_up">
+        <h2>Information</h2>
+            <div class="information">
+                <a href="#"><p>에버랜드 리조트 소개</p></a>
+                <a href="#"><p>이용약관</p></a>
+                <a href="#"><p>이메일주소 무단수집 거부</p></a>
+                <a href="#"><p>채용</p></a>
+                <a href="#"><p>캐스트참여</p></a>
+            </div>
+    </div>
+    <div class="contact_up">
+        <h2>Contact</h2>
+            <div class="contact">
+                <a href="#"><p>031-320-5000(유료)</p></a>
+                <a href="#"><p>경기도 용인시 처인구 포곡읍 에버랜드로 199 삼성물산(주)</p></a>
+                <a href="#"><p>개인정보처리방침</p></a>
+                <a href="#"><p>방침 개정 안내</p></a>
+                <a href="#"><p>입찰공고</p></a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

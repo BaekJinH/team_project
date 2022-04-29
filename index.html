@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everland</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                var video=document.getElementById("vi").clientHeight;
+                var scroll=$(window).scrollTop();
+                if(scroll>video){
+                    $("#container").css("background","#fff");
+                    $("nav ul>li:hover ul>li>a").css("color","#000");
+                    $("nav ul li a").css("color","#000");
+                    $("nav ul>li:hover ul").css("background","#fff");
+
+                }else{
+                    $("nav ul>li:hover ul").css("background","none");
+                    $("#container").css("background","none");
+                    $("nav ul>li:hover ul>li>a").css("color","#fff");
+                    $("nav ul li a").css("color","#fff");
+
+    
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+<div id="video">
+    <video muted  loop id="vi"><source src="img/video.mp4"></video>
+    <div id="fix">
+        <div id="container">
+            <div id="logo"><img src="img/logo.png" alt="as"></div>
+            <nav>
+                <ul>
+                    <li><a href="#">이용정보</a>
+                        <ul>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">프로모션</a>
+                        <ul>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">즐길거리</a>
+                        <ul>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">멤버십</a>
+                        <ul>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">소통공간</a>
+                        <ul>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용방법</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div id="search"></div>
+        </div>
+    </div>
+</div>
+<div id="a">
+<img src="img/logo.png" alt="">
+<img src="img/logo.png" alt="">
+<footer id="footer">aa</footer>
+<img src="img/logo.png" alt="">
+<img src="img/logo.png" alt="">
+<img src="img/logo.png" alt="">
+</div>
+<footer>aa</footer>
+
+</body>
+</html>
