@@ -14,7 +14,7 @@ header{
     width:100%;
     height:100%;
     clip-path: polygon(100% 0, 100% 70%, 50% 100%, 0 70%, 0 0);
-    background-image: url(../img/slide.png);
+    background-image: url(../img/slide3.jpg);
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
@@ -22,7 +22,7 @@ header{
 /* end slider */
 section{
     width:1200px;
-    height:3300px;
+    height:5400px;
     margin:0 auto;
     /* background-color:#ddd; */
 }
@@ -32,18 +32,18 @@ section{
     flex-wrap:wrap;
     justify-content: center;
     height:850px;
-    background-color:beige
+    background-color:#eee;
 }
 .container > h2{
     text-align:center;
+    width:100%;
     height:30px;
-    position:absolute;
     display:block;
 }
 .container > div{
     width:300px;
     heighT: 650px;
-    background-color:#ddd;
+    background-color:white;
     margin:80px 15px;
 }
 .container > .money > .plus{
@@ -60,14 +60,20 @@ section{
     flex-direction: row;
     flex-wrap:wrap;
     justify-content: center;
-    margin:80px 0;
+    align-content: space-around;
+    margin:30px 0;
+    background-color:#eee;
 }
 #yearpass > h2{
+    text-align:center;
+    height:30px;
+    width:100%;
+    display:block
 }
 #yearpass > .money{
     width:300px;
     height:750px;
-    background-color:beige;
+    background-color:white;
     margin:15px;
 }
 #yearpass > .money > div{
@@ -89,13 +95,13 @@ section{
 }
 .char3{
     background-repeat:no-repeat;
-    background-position:center;
+    background-position:right center;
     background-size:100%;
     background-image:url(../img/3.png)
 }
 .char4{
     background-repeat:no-repeat;
-    background-position:center;
+    background-position:right;
     background-size:100%;
     background-image:url(../img/4.png)
 }
@@ -112,22 +118,143 @@ section{
     background-image:url(../img/6.png)
 }
 
-.info > button{
-    border:0.5px solid #ff6633;
+
+
+.more{
+    display:flex;
+    flex-direction:column;
+}
+
+.more > p{
+    display:block;
+    margin:20px;
+}
+
+.container >.money:nth-of-type(1) > div{
+    display:flex;
+    align-content: center;
+}
+.container > .money:nth-of-type(1){
+    display:flex;
+    align-items: center;
+    flex-wrap:wrap;
+}
+.container > .money:nth-of-type(1) > button {
+    border:none;
+    background-color:#ff6633;
+    width:150px;
+    height:30px;
+    color:white;
+    border-radius: 5px;
+}
+.money:nth-of-type(1) > button:hover{
+    background-color:white;
+    color:#555;
+    cursor:pointer;
+}
+.info_container{
+    width:1150px;
+    margin:0 auto;
+    margin-top:170px;
+    /* background-color:#eee; */
+}
+.info_container > button{
+    border:none;
     background-color:#ff6633;
     color:White;
     cursor:pointer;
     padding:10px;
     border-radius:5px;
+    margin:30px 0;
 }
+.info_container > button:hover{
+    background-color:white;
+    color:black;
+}
+
+.info_container > p{
+    line-height: 40px;
+}
+
+
+#promotion{
+    width:1200px;
+    height:2000px;
+    background-color:#ddd;
+}
+#promotion > .button_box{
+    width:100%;
+    height:100px;
+    background-color:aquamarine;
+    display:inline-block;
+}
+#promotion > .button_box > .sub_btnbox{
+    width:50%;
+    float:left;
+    /* background-color:Red; */
+    height:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+#promotion > .button_box > .sub_btnbox> button{
+    border:none;
+    padding:10px 20px;
+    margin:10px;
+    background-color:#ff6633;
+    color:white;
+}
+#promotion > .button_box > .sub_btnbox> button:hover{
+    background-color:white;
+    color:black;
+    cursor:pointer;
+}
+#promotion >.button_box > .sub_btnbox > button:active{
+    background-color:red
+}
+/* .sub_btnbox .sub_btn:active{
+    background-color:Red
+}  시발 안 됨 왜?*/
+
 /* end section */
+
+.scroll_container > div:hover{
+    opacity:0.9;
+    color:black;
+    cursor:pointer;
+}
+.scroll_container > div > span{
+    box-sizing:content-box;
+}
 .scroll1{
     width:50px;
     height:50px;
     border-radius:50%;
-    background-color:orange;
+    background-color:#ff6633;
     opacity:0.7;
+    top:43%;
     right:7%;
-    top:50%;
-    visibility:visible
 }
+
+.scroll2{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background-color:#ff6633;
+    opacity:0.7;
+    top:50%;
+    right:7%;
+}
+
+.scroll3{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background-color:#ff6633;
+    opacity:0.7;
+    top:57%;
+    right:7%;
+}
+

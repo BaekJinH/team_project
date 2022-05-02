@@ -9,13 +9,22 @@
     <link rel="stylesheet" href="css/sub.css">
     <link rel="stylesheet" href="css/reset.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/sub.js"></script>
+    <script src="js/sub.js" type="text/javascript"></script>
+    <script src="js/sub_jquery.js"></script>
 </head>
 <body>
-    <div class="scroll1" style="position:fixed" onscroll="mFunc()" onclick="contai()"></div>
-    <div class="scroll2" style="position:fixed" onscroll="mFunc()" onclick="onday()"></div>
-    <div class="scroll3" style="position:fixed" onscroll="mFunc()" onclick="oneyear()"></div>
-        <header>
+    <div class="scroll_container">
+            <div class="scroll1" style="position:fixed" onscroll="mFunc()" onclick="onday()">
+                <span>종일권</span>
+            </div>
+            <div class="scroll2" style="position:fixed" onscroll="mFunc()" onclick="oneyear()">
+                <span>연간 이용권</span>
+            </div>
+            <div class="scroll3" style="position:fixed" onscroll="mFunc()" onclick="promo()">
+                <span>프로모션</span>
+            </div>
+    </div>     
+    <header>
         </header>
         <div id="slider">
             <div class="slide_image">
@@ -23,57 +32,139 @@
             </div>
         </div>
         <section>
-            <div class="container">
+            <div class="container" id="main1">
                     <h2>종일권</h2>
                 <div class="money">
+                    <div>
+                        <p>에버랜드 입장 및 놀이시설 이용
+                            (코인물/대여물/기획전 등 일부 시설 별도 요금)
+
+                            당일 호암미술관 무료 입장</p>
+                    </div>
+                    <button>ABCD 캘린더</button>
                 </div>
                 <div class="money">
                     <div class="plus">
                         <h3>대인/청소년</h3>
                     </div>
-                        <p>A</p>
-                        <p>B</p>
-                        <p>C</p>
-                        <p>D</p>
+                        <div class="more">
+                            <p>A :&nbsp; 58,000 원</p>
+                            <p>B :&nbsp; 50,000 원</p>
+                            <p>C :&nbsp; 46,000 원</p>
+                            <p>D :&nbsp; 64,000 원</p>
+                        </div>
                 </div>
                 <div class="money">
                     <div class="plus">
                         <h3>소인/경로</h3>
                     </div>
-                        <p>A</p>
-                        <p>B</p>
-                        <p>C</p>
-                        <p>D</p>
+                        <div class="more">
+                            <p>A :&nbsp;46,000 원</p>
+                            <p>B :&nbsp;40,000 원</p>
+                            <p>C :&nbsp;36,000 원</p>
+                            <p>D :&nbsp;51,000 원</p>
+                        </div>
                 </div>
             </div>
             <div id="yearpass">
                 <h2>연간이용권</h2>
                 <div class="money">
-                    <div class="char1"></div>
+                    <div class="char1">
+                        <h3>365 스탠다드</h3>
+                    </div>
+                        <p>상품소개</p>
+                            <span>- 365일 언제나
+                                    사용가능</span>
+                        <p>가격</p>
                 </div>
                 <div class="money">
-                    <div class="char2"></div>
+                    <div class="char2">
+                        <h3>365 시니어</h3>
+                    </div>
+                        <p>상품소개</p>
+                        <p>가격</p>
                 </div>
                 <div class="money">
-                    <div class="char3"></div>
+                    <div class="char3">
+                        <h3>365 베이비</h3>
+                    </div>
+                        <p>상품소개</p>
+                        <p>가격</p>
                 </div>
                 <div class="money">
-                    <div class="char4"></div>
+                    <div class="char4">
+                        <h3>350 스탠다드</h3>
+                    </div>
+                        <p>상품소개</p>
+                            <span>- 약 350일 이용가능    (주요연휴기간 제외) </span>
+                        <p>가격</p>
                 </div>
                 <div class="money">
-                    <div class="char5"></div>
+                    <div class="char5">
+                        <h3>320 셀렉트</h3>
+                    </div>
+                        <p>상품소개</p>
+                            <span>- 약 320일 이용가능     (D기간 이용불가)</span>
+                        <p>가격</p>
                 </div>
                 <div class="money">
-                    <div class="char6"></div>
+                    <div class="char6">
+                        <h3>250 위크데이</h3>
+                    </div>
+                    <div class="inf">
+                        <p>상품소개</p>
+                            <span>- 약 250일 이용가능     (주말,휴일 이용불가)</span>
+                        <p>가격</p>
+                    </div>
                 </div>
             </div>
-            <div class="info">
-                <h4>*&nbsp;&nbsp;&nbsp;가입안내</h4>
-                
+            <div id="promotion">
+                        <h2>프로모션</h2>
+                            <div class="button_box">
+                                <div class="sub_btnbox">
+                                    <button class="sub_btn" onclick="Buttontoggle();">유아 동반 가족</button>
+                                    <button class="sub_btn" onclick="Buttontoggle();">전체</button>
+                                    <button class="sub_btn" onclick="Buttontoggle();">일반</button>
+                                    <button class="sub_btn" onclick="Buttontoggle();">초/중/고 동반 가족</button>
+                                    <button class="sub_btn" onclick="Buttontoggle();">카드</button>
+                                </div>
+                            </div>
+                    <div class="pro_container">
+                            <div class="spec"></div>
+                            <div class="spec"></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                    </div>
+            </div>
+            <div class="info_container" id="main3">
+                <h3>*&nbsp;&nbsp;&nbsp;가입안내</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>※ 입장 제한일이 있는 권종은, 입장 제한일에 방문할 경우 매표소에서 연간이용권과 신분증을 제시하시고</b><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1일 이용권을 해당일자의 정상금액에서 40% 할인하여 구입하실 수 있습니다.
+                     <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>※ 재가입 및 연차 적용 기준<br></b>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 셀렉트/위크데이 가입 시 연차는 인정되나 혜택은 제공이 불가합니다. (추후 스탠다드권종 가입 시 혜택 적용 가능)
+                     <br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>※ 365시니어/365베이비패스 가입 시 주의사항<br></b>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 가입 대상임을 증명할 수 있는 증빙서류 제출 필수(스마트예약 결제 시 + 현장방문 결제 선택 필수)<Br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 베이비 확인 서류: 주민등록등본, 건강보험증<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;시니어 확인 서류: 주민등록등본, 자동차 운전 면허증, 여권<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;단, 재가입시에는 스마트예약에서 별도 확인없이 가입 가능<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 베이비패스는 생애 1회 한해 가입 가능하며, 만기 이전 해지할 경우 해당 권종으로 재가입은 불가합니다.</p>
                     <button>연간이용권 프로모션 이용안내 바로 가기</button>
-                <h4>*&nbsp;&nbsp;&nbsp;우대정보</h4>
+                <h3>*&nbsp;&nbsp;&nbsp;우대정보</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>※ 타 제휴카드 및 프로모션 등과 중복 우대 적용 불가<br></b>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>※ 신분증 / 서류 확인이 필요한 경우 현장매표소에서만 구입 가능합니다.</p></b>
             </div>
         </section>
+        <!-- <div class="topbox">
+            <div style="cursor:pointer;" onclick="window.scrollTo(0,0);" class="top">TOP</div>
+        </div> -->
         <footer>
             <div class="foot_img">
                 <img src="img/twitter.png" alt="">
@@ -120,5 +211,6 @@
             </div>
         </footer>
         <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onscroll2">onscroll 참고하기</a>
-</body>
+        <a href="https://juni-official.tistory.com/148">타겟 이동</a>
+    </body>
 </html>
