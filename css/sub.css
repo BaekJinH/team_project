@@ -22,7 +22,7 @@ header{
 /* end slider */
 section{
     width:1200px;
-    height:5400px;
+    height:auto;
     margin:0 auto;
     /* background-color:#ddd; */
 }
@@ -31,24 +31,30 @@ section{
     flex-direction:row;
     flex-wrap:wrap;
     justify-content: center;
-    height:850px;
-    background-color:#eee;
+    height:auto;
+    /* background-color:#eee; */
+    position:relative;
+    margin-top:50px;
 }
 .container > h2{
     text-align:center;
     width:100%;
     height:30px;
     display:block;
+    position:absolute;
 }
 .container > div{
     width:300px;
-    heighT: 650px;
-    background-color:white;
+    heighT: 550px;
     margin:80px 15px;
+    border:1px solid #eee;
+}
+.money1{
+    font-size:15px;
 }
 .container > .money > .plus{
     width:500px;
-    height:300px;
+    height:250px;
     background-color:white;
     position:relative;
     vertical-align:middle;
@@ -59,44 +65,113 @@ section{
     display:flex;
     flex-direction: row;
     flex-wrap:wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-content: space-around;
-    margin:30px 0;
-    background-color:#eee;
+    margin:10px;
+    /* background-color:#eee; */
 }
 #yearpass > h2{
     text-align:center;
     height:30px;
     width:100%;
-    display:block
+    display:block;
 }
 #yearpass > .money{
     width:300px;
     height:750px;
-    background-color:white;
-    margin:15px;
+    /* background-color:#ddd; */
+    margin:10px;
+    border:1px solid #eee;
 }
-#yearpass > .money > div{
+#yearpass > .money > .char{
     width:100%;
     height:300px;
     background-color:white;
 }
+.money > .intro{
+    width:100%;
+    height:200px;
+    background-color:white;
+}
+.intro > h3{
+    text-align:Center;
+}
+.intro > p{
+    text-align:Center;
+    margin:25px;
+}
+.intro > span{
+    text-align:center;
+    display:block
+}
+.money > .out{
+    background-color:white;
+    width:100%;
+    height:50px;
+}
+.out{
+    justify-content: center;
+    align-content: flex-start;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.out > p{
+    width:100%;
+    text-align:center;
+    margin:10px;
+}
+.out > span{
+    display: block;
+    width:80px;
+    text-align:center;
+}
+.last{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content:center;
+    background-color:white;
+    /* border-bottom: 1px solid #eee; */
+    align-items:center;
+}
+.last > span{
+    width: 90px;
+    display:block;
+    text-align:center;
+    padding:25px 0;
+}
+.last2{
+    height:195px !important;
+    align-content: center;
+}
+.last3{
+    /* background-color:red; */
+    height:195px;
+    align-content:center;
+}
+.year_info{
+    display:flex;
+    justify-content: center;
+}
 .char1{
     background-image:url(../img/1.png);
     background-repeat:no-repeat;
-    background-position:bottom center;
+    background-position:center;
     background-size:110%;
 }
 .char2{
     background-repeat:no-repeat;
     background-position:10px 10px;
-    background-size:100%;
+    background-position:bottom center;
+    background-size:80%;
     background-image:url(../img/1-1.png)
 }
 .char3{
     background-repeat:no-repeat;
-    background-position:right center;
-    background-size:100%;
+    background-position: center;
+    background-size:80%;
     background-image:url(../img/3-1.png)
 }
 .char4{
@@ -114,15 +189,31 @@ section{
 .char6{
     background-repeat:no-repeat;
     background-position:center;
-    background-size:100%;
+    background-size:73%;
     background-image:url(../img/6-1.png)
 }
 
+/* jq용 */
 
+.show{
+    display:block;
+}
+.hide{
+    display:none;
+}
 
+.toggle{
+    background-color:red
+}
+
+/*  */
+#info{
+    display:none;
+}
 .more{
     display:flex;
     flex-direction:column;
+    align-items: center;
 }
 
 .more > p{
@@ -130,16 +221,23 @@ section{
     margin:20px;
 }
 
-.container >.money:nth-of-type(1) > div{
+.oday_info{
     display:flex;
-    align-content: center;
-}
-.container > .money:nth-of-type(1){
-    display:flex;
-    align-items: center;
+    flex-direction: row;
     flex-wrap:wrap;
+    justify-content:center;
+    align-items: flex-end;
+    height:300px;
 }
-.container > .money:nth-of-type(1) > button {
+.oday_info > p{
+    text-align:center;
+}
+.oday_btn{
+    display:flex;
+    justify-content:center;
+    margin-top:50px;
+}
+.oday_btn > button {
     border:none;
     background-color:#ff6633;
     width:150px;
@@ -147,10 +245,11 @@ section{
     color:white;
     border-radius: 5px;
 }
-.money:nth-of-type(1) > button:hover{
+.oday_btn > button:hover{
     background-color:white;
     color:#555;
     cursor:pointer;
+    transition:all 0.5s
 }
 .info_container{
     width:1150px;
@@ -170,6 +269,7 @@ section{
 .info_container > button:hover{
     background-color:white;
     color:black;
+    transition:all 0.5s
 }
 
 .info_container > p{
@@ -179,13 +279,16 @@ section{
 
 #promotion{
     width:1200px;
-    height:2000px;
-    background-color:#ddd;
+    height:auto;
+    /* background-color:#ddd; */
+}
+#promotion > h2{
+    text-align:Center;
 }
 #promotion > .button_box{
     width:100%;
     height:100px;
-    background-color:aquamarine;
+    /* background-color:aquamarine; */
     display:inline-block;
 }
 #promotion > .button_box > .sub_btnbox{
@@ -202,7 +305,6 @@ section{
 #promotion > .button_box > .sub_btnbox> button{
     border:none;
     padding:10px 20px;
-    margin:10px;
     background-color:#ff6633;
     color:white;
 }
@@ -210,13 +312,16 @@ section{
     background-color:white;
     color:black;
     cursor:pointer;
+    transition:all 0.5s;
 }
-#promotion >.button_box > .sub_btnbox > button:active{
+
+/* #promotion >.button_box > .sub_btnbox > button:active{
     background-color:red
-}
+} */
 /* .sub_btnbox .sub_btn:active{
     background-color:Red
 }  시발 안 됨 왜?*/
+
 .pro_container{
     display:flex;
     flex:row wrap;
@@ -229,8 +334,43 @@ section{
     height:250px;
     background-color:white;
     margin:5px;
+    position:relative;
+    border:1px solid #eee;
 }
 
+.spec img{
+    position:absolute;
+    right:30px;
+    bottom:0px;
+}
+.spec h2{
+    margin-top:15px;
+    margin-left:25px;    
+    font-size:30px;
+    color:#ff6633;
+    font-weight:bold;
+}
+.normal h2{
+    margin-top:15px;
+    margin-left:25px;    
+    font-size:25px;
+}
+.normal h4{
+    margin-left:25px;
+    font-size:15px;
+}
+.spec h4{
+    margin-left:25px;
+    color:#ff6633;
+    font-size:18px;
+}
+.spec > span{
+    font-size:13px;
+    margin:30px 25px;
+    display:block;
+    color:#ff6633;
+    opacity:0.7
+}
 .normal{
     display:flex;
     width:100%;
@@ -247,45 +387,96 @@ section{
     height:250px;
     background-color:white;
     margin:5px;
+    position:relative;
+    border:1px solid #eee;
+    box-sizing:border-box
+}
+.spec > .serv{
+    width:80px;
+    height:30px;
+    background-color:#ff6633;
+    text-align:center;
+    color:white;
+    line-height:28px
+
+}
+.serv{
+    width:80px;
+    height:30px;
+    background-color:#eee;
+    text-align:center;
+    color:#444;
+    line-height:28px
 }
 
+.pay{
+    width:100%;
+    height:50px;
+    /* background-color:#eee; */
+    bottom:0;
+    left:0;
+    position:absolute;
+}
+.pay > span{
+    font-weight:bold;
+    margin-left:30px;
+    line-height:48px;
+}
+#main3 > button{
+    margin-lefT:50px;
+}
 /* end section */
 
-.scroll_container > div:hover{
-    opacity:0.9;
-    color:black;
-    cursor:pointer;
+.quickmenu{
+    position:absolute;
 }
-.scroll_container > div > span{
+.quickmenu > div{
+    z-index:55;
+    word-break:break-all;
+    text-align:center;
+    position:relative
+}
+
+.quickmenu > div > span{
+    font-size:15px;
+}
+.quickmenu > div:hover{
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    background-color:white
+
+}
+.quickmenu > div > span{
     box-sizing:content-box;
 }
 .scroll1{
-    width:50px;
-    height:50px;
+    width:60px;
+    height:60px;
     border-radius:50%;
     background-color:#ff6633;
-    opacity:0.7;
     top:43%;
+    color:White;
     right:7%;
 }
 
 .scroll2{
-    width:50px;
-    height:50px;
+    width:60px;
+    height:60px;
     border-radius:50%;
     background-color:#ff6633;
-    opacity:0.7;
     top:50%;
+    color:White;
     right:7%;
 }
 
 .scroll3{
-    width:50px;
-    height:50px;
+    width:60px;
+    height:60px;
     border-radius:50%;
     background-color:#ff6633;
-    opacity:0.7;
     top:57%;
     right:7%;
+    color:White;
 }
 
