@@ -190,6 +190,12 @@ $(function(){
     })
 })
 
+// $(function(){
+//     $('.btn').click(function(){
+//         $('.spec').attr('kid').hide();
+//     })
+// })
+
 $(document).ready(function(){
     var currentPosition = parseInt($('.quickmenu').css('top'));
     $(window).scroll(function(){
@@ -197,3 +203,7 @@ $(document).ready(function(){
         $('.quickmenu').stop().animate({'top':position+currentPosition+'px'},1000)
     });
 });
+
+var val = document.getElementsByClassName('sub_btn1').value
+    docuement.getElementsByClassName('sub_btn1').addEventListener('click', function(){
+    })
