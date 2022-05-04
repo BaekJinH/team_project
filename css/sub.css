@@ -168,6 +168,9 @@ section{
     display:flex;
     justify-content: center;
 }
+
+
+
 .container > .money:hover{
     cursor:pointer;
     border:1.5px solid #ff7c50;
@@ -192,6 +195,9 @@ section{
     box-shadow: 10px 35px 35px #eee;
     transition:all 0.5s
 }
+
+
+
 .char1{
     background-image:url(../img/yearpass_2.png);
     background-repeat:no-repeat;
@@ -230,20 +236,7 @@ section{
     background-image:url(../img/6-1.png)
 }
 
-/* jq용 */
 
-.show{
-    display:block;
-}
-.hide{
-    display:none;
-}
-
-.toggle{
-    background-color:red
-}
-
-/*  */
 #info{
     display:none;
 }
@@ -277,15 +270,15 @@ section{
 }
 .oday_btn > button {
     border:none;
-    background-color:#ff6633;
+    background-color:#eee;
     width:150px;
     height:30px;
-    color:white;
+    color:black;
     border-radius: 5px;
 }
 .oday_btn > button:hover{
-    background-color:white;
-    color:#555;
+    background-color:#ff6633;
+    color:white;
     cursor:pointer;
     transition:all 0.5s
 }
@@ -297,16 +290,16 @@ section{
 }
 .info_container > button{
     border:none;
-    background-color:#ff6633;
-    color:White;
+    background-color:#eee;
+    color:black;
     cursor:pointer;
     padding:10px;
     border-radius:5px;
     margin:30px 0;
 }
 .info_container > button:hover{
-    background-color:white;
-    color:black;
+    background-color:#ff6633;
+    color:white;
     transition:all 0.5s
 }
 
@@ -343,22 +336,15 @@ section{
 #promotion > .button_box > .sub_btnbox> button{
     border:none;
     padding:10px 20px;
-    background-color:#ff6633;
-    color:white;
+    background-color:#eee;
+    color:black;
 }
 #promotion > .button_box > .sub_btnbox> button:hover{
-    background-color:white;
-    color:black;
+    background-color:#ff6633;
+    color:white;
     cursor:pointer;
     transition:all 0.5s;
 }
-
-/* #promotion >.button_box > .sub_btnbox > button:active{
-    background-color:red
-} */
-/* .sub_btnbox .sub_btn:active{
-    background-color:Red
-}  시발 안 됨 왜?*/
 
 .pro_container{
     display:flex;
@@ -375,6 +361,160 @@ section{
     position:relative;
     border:1px solid #eee;
 }
+
+#promotion > .pro_normal{
+    margin:50px;
+}
+.spec_sub2{
+    display:flex;
+    flex:row wrap;
+    justify-content:center;
+    margin:50px
+}
+.spec_sub2 > .spec{
+    width:47%;
+    height:250px;
+    background-color:white;
+    margin:5px;
+    position:relative;
+    border:1px solid #eee;
+}
+.norm_sub{
+    display:flex;
+    width:100%;
+    height:100%;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-content:flex-start;
+    margin:50px 0;
+}
+.norm_sub > .norm{
+    width:30%;
+    height:250px;
+    background-color:white;
+    margin:5px;
+    position:relative;
+    border:1px solid #eee;
+    box-sizing:border-box
+}
+.norm_sub > .norm:hover{
+    cursor:pointer;
+    border:1.5px solid #ff7c50;
+    box-shadow: 10px 35px 35px #eee;
+    transition:all 0.5s
+}
+
+.pro_normal >.spec_sub2 > .spec:hover{
+    cursor:pointer;
+    border:1.5px solid #ff7c50;
+    box-shadow: 10px 35px 35px #eee;
+    transition:all 0.5s
+}
+.norm > h2{
+    margin-top:15px;
+    margin-left:25px;    
+    font-size:25px;
+}
+.norm > h4{
+    margin-left:25px;
+    font-size:15px;
+}
+
+
+
+#promotion > .kids_family{
+    margin:50px;
+}
+.sub_spec{
+    display:flex;
+    width:100%;
+    flex-flow:wrap;
+    justify-content: center;
+
+}
+.sub_spec > .spec{
+    width:45%;
+    height:250px;
+    background-color:white;
+    margin:5px;
+    position:relative;
+    border:1px solid #eee;
+}
+.sub_spec  > .spec:hover{
+    cursor:pointer;
+    border:1.5px solid #ff7c50;
+    box-shadow: 10px 35px 35px #eee;
+    transition:all 0.5s
+}
+.sub_kid{
+    display:flex;
+    width:100%;
+    height:100%;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    align-content:flex-start;
+    margin:50px 0;
+}
+.sub_kid > .norm{
+    width:30%;
+    height:250px;
+    background-color:white;
+    margin:5px;
+    position:relative;
+    border:1px solid #eee;
+    box-sizing:border-box
+}
+.sub_kid > .norm:hover{
+    cursor:pointer;
+    border:1.5px solid #ff7c50;
+    box-shadow: 10px 35px 35px #eee;
+    transition:all 0.5s
+}
+#promotion > .normal_family{
+    margin:50px;
+    display:flex;
+    justify-content: center;
+}
+.normal_family > .norm{
+    width:30%;
+    height:250px;
+    background-color:white;
+    margin:5px;
+    position:relative;
+    border:1px solid #eee;
+    box-sizing:border-box
+}
+.normal_family > .norm:hover{
+    cursor:pointer;
+    border:1.5px solid #ff7c50;
+    box-shadow: 10px 35px 35px #eee;
+    transition:all 0.5s
+}
+.card{
+    position:relative;
+    margin-top:100px;
+}
+.card > div{
+    position:absolute;
+    border-radius:50%;
+    /* background-color:red; */
+    background-image: url(../img/none-icon.png);
+    background-position:center;
+    width:100px;
+    height:100px;
+    left:46%;
+    border:2px solid #eee;
+    top: 30px;
+}
+.card h2{
+    text-align:center;
+    line-height:300px;
+    position:relative;
+    top:20px;
+}
+
 .intro > p{
     font-weight:bold;
 }
@@ -440,7 +580,7 @@ section{
     background-color:#ff6633;
     text-align:center;
     color:white;
-    line-height:28px
+    line-height:28px;
 
 }
 .serv{
@@ -471,9 +611,20 @@ section{
     margin-lefT:50px;
 }
 /* end section */
+#section{
+    position:relative;
+}
 
+body{
+    position:relative;
+    
+}
 .quickmenu{
     position:absolute;
+    top:20%;
+    right:8%;
+    /* background-color:Red; */
+    heighT:400px;
 }
 .quickmenu > div{
     z-index:55;
@@ -481,16 +632,17 @@ section{
     text-align:center;
     position:relative
 }
+.quickmenu > div:hover{
 
+    background-color:#ff6633;
+    color:white;
+    cursor:pointer;
+    transition:all 0.5s;
+    font-weight:bold;
+
+}
 .quickmenu > div > span{
     font-size:15px;
-}
-.quickmenu > div:hover{
-    color:black;
-    font-weight:bold;
-    cursor:pointer;
-    background-color:white
-
 }
 .quickmenu > div > span{
     box-sizing:content-box;
@@ -499,11 +651,10 @@ section{
     width:60px;
     height:60px;
     border-radius:50%;
-    background-color:#ff6633;
+    background-color:rgb(245, 245, 245);
     top:43%;
-    color:White;
+    color:black;
     right:7%;
-    position:relative;
     line-height:55px;
 }
 
@@ -511,9 +662,9 @@ section{
     width:60px;
     height:60px;
     border-radius:50%;
-    background-color:#ff6633;
+    background-color:rgb(245, 245, 245);
     top:50%;
-    color:White;
+    color:black;
     right:7%;
     position:relative;
     line-height:55px;
@@ -523,10 +674,10 @@ section{
     width:60px;
     height:60px;
     border-radius:50%;
-    background-color:#ff6633;
+    background-color:rgb(245, 245, 245);
     top:57%;
     right:7%;
-    color:White;
+    color:black;
     position:relative;
     line-height:55px
 }
@@ -536,3 +687,29 @@ section{
     width:30px;
     heighT:30px;
 } */
+
+.active{
+    background:#ff6633;
+}
+
+.fix{
+    position:fixed;
+    /* position:absolute;
+    width:100%;
+    top:0;
+    z-index:100; */
+}
+.fixinner{
+    position:fixed
+}
+
+
+#main{
+    padding:50px 0;
+}
+#main2{
+    padding:70px 0;
+}
+#main4{
+    padding:77px 0;
+}

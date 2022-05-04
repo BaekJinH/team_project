@@ -16,7 +16,7 @@
 }
 video{
   width: 100%;
-  filter: grayscale(80%);
+  filter: grayscale(50%);
 }
 
 
@@ -35,8 +35,7 @@ video{
   
 }
 #logo{
-  width: 200px;
-  height: 120px;
+  width: 150px;
   flex-shrink: 0;
 }
 #logo img{
@@ -68,8 +67,20 @@ nav li{
 .mainmenu>li{
   display: inline-block;
   font-size: 25px;
-  width: 140px;
+  width: 170px;
   text-align: center;
+  position: relative;
+}
+.mainmenu>li:nth-of-type(1){
+  width: 150px;
+}
+
+.mainmenu>li:nth-of-type(4){
+  width: 150px;
+}
+
+.mainmenu>li:last-of-type{
+  width: 200px;
 }
 nav ul li a{
   display: inline-block;
@@ -92,11 +103,22 @@ nav ul li:hover {
 .sub>li{
   display: block;
   font-size: 25px;
-  width: 140px;
+  width: 170px;
   text-align: center;
 }
+.ulone li{
+  width: 150px;
+}
+.ulfour li{
+  width: 150px;
+}
+.ulfive li{
+  width: 200px;
+}
+
 nav>ul>li>ul{
   position: absolute;
+  top: 46px;
 }
 /* ㅡㅡㅡㅡㅡㅡㅡ네비게이션ㅡㅡㅡㅡㅡㅡ */
 
@@ -104,24 +126,55 @@ nav>ul>li>ul{
   width: 400px;
   height: 120px;
   display: flex;
-  font-size: 22px;
+  font-size: 18px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   color: #fff;
   flex-shrink: 0;
 }
-#search>div{
+#search>.hide{
   border-right: 1px solid #333;
-  padding: 0 18px 0 0px;
+  padding: 0 20px;
 }
-#search>div:nth-of-type(4){
-  border: none;
-}
+
 #search>div a{
   color: #fff;
 }
 #searchfour img{
   width: 30px;
+  cursor: pointer;
+}
+#searchfour{
+  border-right: none !important;
+}
+#hidesearch{
+  display: none;
+}
+
+#hidesearch input[type="search"]{
+  border:1px solid #ff6633;
+  border-radius: 5px;
+  padding: 5px 30px;
+
+}
+#hidesearch input[type="image"]{
+  width: 29px;
+  height: 28px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 20px 0 -34px;
+  padding-top: 5px;
+}
+#hidesearch button{
+  background-color: #ff6633;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 25px;
+}
+#box{
+  display: flex;
 }
 
 /*ㅡㅡㅡㅡㅡ 여기까지 헤더ㅡㅡㅡㅡㅡ */
@@ -144,6 +197,7 @@ footer{
 .foot_logo > a > img{
     display:block;
     position:relative;
+    /* width: 200px; */
     top:38px;
     left:18px;
 }
@@ -157,24 +211,8 @@ footer{
     line-height: 60px;
     color:#666
 }
-.link > a{
-    margin:20px 0px;
-    text-decoration:none;
-    display:block;
-    color:#333;
-}
-
-.contact > a{
-    margin:20px 0px;
-    text-decoration:none;
-    color:#333;
-    display:block;
-}
-.information > a{
-    margin:20px 0px;
-    text-decoration:none;
-    color:#333;
-    display:block;
+.foot_container p{
+  margin:20px 0px;
 }
 .foot_img{
     height:100px;
@@ -192,6 +230,26 @@ footer{
 }
 .foot_img img:hover{
     cursor:pointer
+}
+
+
+.foot_container a{
+  position: relative;
+}
+.foot_container a::before{
+  content: "";
+  position: absolute;
+  background-color: #ff6633;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 50%;
+  transition: all 0.5s;
+  transform: translateX(-50%);
+}
+
+.foot_container a:hover::before{
+  width: 100%;
 }
 
 

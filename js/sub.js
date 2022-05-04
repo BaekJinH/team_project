@@ -153,10 +153,6 @@
 //     sub_btn5.classList.remove('flipped');
 //   });
 
-// function Buttontoggle(){
-//     let btn = document.querySelector('.btn');
-//     btn.classList.toggle('active');
-// }
 
 
 // $(document).ready(function(){
@@ -170,40 +166,137 @@
 //     });
 // });
 
-function onday(){
-    window.location.href='#main1'
-}
-function oneyear(){
-    window.location.href='#yearpass'
-}
-function promo(){
-    window.location.href='#promotion'
-}
+
 
 
 $(function(){
     $('#semi_info').click(function(){
-        $('#info').fadeIn();
-        $('#semi_info').click(function(){
-            $('#info').hide();
-        })  
-    })
-})
-
-// $(function(){
-//     $('.btn').click(function(){
-//         $('.spec').attr('kid').hide();
-//     })
-// })
-
-$(document).ready(function(){
-    var currentPosition = parseInt($('.quickmenu').css('top'));
-    $(window).scroll(function(){
-        var position = $(window).scrollTop();
-        $('.quickmenu').stop().animate({'top':position+currentPosition+'px'},1000)
+        $('#info').slideToggle();
+        
     });
 });
+
+$(function(){
+    $('.sub_btn1').click(function(){
+        $('.all').fadeIn();
+        $('.pro_normal').hide();
+        $('.kids_family').hide();
+        $('.normal_family').hide();
+        $('.card').hide();
+    })
+    $('.sub_btn2').click(function(){
+        $('.pro_normal').fadeIn();
+        $('.all').hide();
+        $('.kids_family').hide();
+        $('.normal_family').hide();
+        $('.card').hide();
+    })
+    $('.sub_btn3').click(function(){
+        $('.kids_family').fadeIn();
+        $('.pro_normal').hide();
+        $('.all').hide();
+        $('.normal_family').hide();
+        $('.card').hide();
+    })
+    $('.sub_btn4').click(function(){
+        $('.normal_family').fadeIn();
+        $('.pro_normal').hide();
+        $('.kids_family').hide();
+        $('.all').hide();
+        $('.card').hide();
+    })
+    $('.sub_btn5').click(function(){
+        $('.card').fadeIn();
+        $('.pro_normal').hide();
+        $('.kids_family').hide();
+        $('.normal_family').hide();
+        $('.all').hide();
+    })
+
+})
+
+
+function onday(){
+    window.location.href='#main'
+}
+function oneyear(){
+    window.location.href='#main2'
+}
+function promo(){
+    window.location.href='#main4'
+}
+
+// $(document).ready(function(){
+//     var currentPosition = parseInt($('.quickmenu').css('top'));
+//     $(window).scroll(function(){
+//         var position = $(window).scrollTop();
+//         $('.quickmenu').stop().animate({'top':position+currentPosition+'px'},1100)
+//     });
+// });  -------- 수정하기
+
+
+$(window).scroll(  
+    function(){  
+        if($(window).scrollTop() > 350){  
+            $('.quickmenu').addClass("fix");  
+        }else{  
+            $('.quickmenu').removeClass("fix");  
+        }  
+    }  
+);  
+
+
+
+// $(window).scroll(  
+//     function(){  
+//         if($(window).scrollTop() > 450){  
+//             $('.quickmenu').addClass("fix");  
+//         }else{  
+//             $('.quickmenu').removeClass("fix");  
+//         }  
+//     }  
+// );  
+
+
+
+
 
 var val = document.getElementsByClassName('sub_btn1').value
     docuement.getElementsByClassName('sub_btn1').addEventListener('click', function(){
     })
+
+
+let sub_btn1 = document.querySelector('.sub_btn1');
+let sub_btn2 = document.querySelector('.sub_btn2');
+let sub_btn3 = document.querySelector('.sub_btn3');
+let sub_btn4 = document.querySelector('.sub_btn4');
+let sub_btn5 = document.querySelector('.sub_btn5');
+
+sub_btn1.addEventListener('click',function(){
+    sub_btn1.classList.toggle('active')
+})
+
+
+// onscroll = function() {
+//     var nVScroll = document.documentElement.scrollTop || document.body.scrollTop;
+//     if(nVScroll > 40) $(".scroll")css("position", "fixed"); 
+//     else $(".scroll").css("position", "relative");
+//   };
+
+// $(window).scroll(function(){
+//     if($(this).scrollTop()>200){
+//         $('.quickmenu').css('position','fixed');
+//     }
+//     else{
+//         $('.quickmenu').css('position','relative');
+//     }
+// });
+
+
+// $(window).on('scroll',function(){
+//     if ($(window).scrollTop()>520){
+//         $('.quickmenu').addClass('fixed');
+//     }else{
+//         $('.quickmenu').removeClass('fixed');
+//     }
+// })
