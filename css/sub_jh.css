@@ -132,13 +132,16 @@ section{
     flex-direction: row;
     flex-wrap: wrap;
     border-top:1px solid rgb(190, 188, 188);
+    border-bottom: 1px solid rgb(190, 188, 188);
 }
 .out > p{
+    line-height:15px;
     width:100%;
     text-align:center;
-    margin:10px;
+    margin:15px;
 }
 .out > span{
+    margin:5px 0;
     display: block;
     width:80px;
     text-align:center;
@@ -154,10 +157,11 @@ section{
     align-items:center;
 }
 .last > span{
+    margin-top:10px;
     width: 90px;
     display:block;
     text-align:center;
-    padding:25px 0;
+    padding:20px 0;
 }
 .last2{
     height:195px !important;
@@ -723,5 +727,6 @@ body{
 }
 
 .flipped{
-    background:black;
+    background:rgb(190, 188, 188);
 }
+
