@@ -16,6 +16,7 @@
 }
 video{
   width: 100%;
+
   filter: grayscale(50%);
 }
 
@@ -233,10 +234,10 @@ footer{
 }
 
 
-.foot_container a{
+.foot_container p> a{
   position: relative;
 }
-.foot_container a::before{
+.foot_container p>a::before{
   content: "";
   position: absolute;
   background-color: #ff6633;
@@ -248,7 +249,7 @@ footer{
   transform: translateX(-50%);
 }
 
-.foot_container a:hover::before{
+.foot_container p>a:hover::before{
   width: 100%;
 }
 

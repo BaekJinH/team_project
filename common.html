@@ -14,89 +14,109 @@
         $(function(){
             $(window).scroll(function(){
                 var video=document.getElementById("vi").clientHeight;
-                var height=video-100;
+                var height=video-550;
+                var max= document.getElementsByTagName("body")[0].clientHeight; 
                 var scroll=$(window).scrollTop();
                 if(scroll>height){
                     $("#container").css("background","#fff");
-                    $(".mainmenu>li>a").css("color","#000");
-                    $(".sub>li>a").css("color","#000");
+                    $(".mainmenu>li>a").css("color","#333");
+                    $(".sub>li>a").css("color","#333");
                     $(".sub").css("background","#fff");
-                    $("#search>div a").css("color","#000");
-
-
-                }else{
+                    $("#search>div a").css("color","#666");
+                }
+                else{
                     $("#container").css("background","none");
                     $(".mainmenu>li>a").css("color","#fff");
                     $(".sub>li>a").css("color","#fff");
                     $(".sub").css("background","none");
                     $("#search>div a").css("color","#fff");
-
                 }
             })
+            $("#searchfour").click(function(){
+                $(".hide").hide();
+                $("#hidesearch").show();
+                $("#search>div").css("border","none");
+                $("#search").css("justify-content","flex-end");
+            });
+            $("#close").click(function(){
+                $(".hide").show();
+                $("#hidesearch").hide();
+                $("#search>div").css("border-right","1px solid #000");
+                $("#searchfour").css("border-right","none");
+                $("#search").css("justify-content","space-between");
+            });
         });
     </script>
+  
+
 </head>
 <body>
 <div id="video">
-    <video muted  loop id="vi"><source src="img/video.mp4"></video>
+    <!-- 이미지 넣는곳 -->
     <div id="fix">
         <div id="container">
-            <div id="logo"><img src="img/logo.png" alt="as"></div>
+            <div id="logo"><a href="index.html"><img src="img/logo.png" alt="as"> </a></div>
             <nav>
                 <ul class="mainmenu">
                     <li><a href="#">이용정보</a>
-                        <ul class="sub">
-                            <li><a href="">이용방법</a></li>
-                            <li><a href="">이용방법</a></li>
-                            <li><a href="">이용방법</a></li>
-                            <li><a href="">이용방법</a></li>
+                        <ul class="sub ulone">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">이용방법</a></li>
+                            <li><a href="#">운영시간</a></li>
+                            <li><a href="#">운휴안내</a></li>
+                            <li><a href="#">교통정보</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">프로모션</a>
-                        <ul class="sub">
-                            <li><a href="">이용방법</a></li>
-                            <li><a href="">이용방법</a></li>
-                            <li><a href="">이용방법</a></li>
-                            <li><a href="">이용방법</a></li>
+                    <li><a href="#">요금&프로모션</a>
+                        <ul class="sub ultwo">
+                            <li><a href="#">이용요금</a></li>
+                            <li><a href="#">제휴카드</a></li>
+                            <li><a href="#">스페셜 프로모션</a></li>
+                            <li><a href="#">드림투어</a></li>
+                            <li><a href="#">체험프로그램</a></li>
                         </ul>
                     </li>
                     <li><a href="#">즐길거리</a>
-                        <ul class="sub">
-                            <li><a href="">이용방법</a></li>
-                            <li><a href="">이용방법</a></li>
-                            <li><a href="">이용방법</a></li>
-                            <li><a href="">이용방법</a></li>
+                        <ul class="sub ulthree">
+                            <li><a href="#">추천코스</a></li>
+                            <li><a href="#">어트랙션</a></li>
+                            <li><a href="#">엔터테인먼트</a></li>
                         </ul>
                     </li>
                     <li><a href="#">멤버십</a>
-                        <ul class="sub">
-                            <li><a href="">이용방법</a></li>
-                            <li><a href="">이용방법</a></li>
-                            <li><a href="">이용방법</a></li>
-                            <li><a href="">이용방법</a></li>
+                        <ul class="sub ulfour">
+                            <li><a href="">연간이용권</a></li>
+                            <li><a href="">시즌이용권</a></li>
+                            <li><a href="">스피드웨이</a></li>
+                            <li><a href="">동물사랑단</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">소통공간</a>
-                        <ul class="sub">
-                            <li><a href="">이용방법</a></li>
-                            <li><a href="">이용방법</a></li>
-                            <li><a href="">이용방법</a></li>
-                            <li><a href="">이용방법</a></li>
+                    <li><a href="#">에버랜드 스토리</a>
+                        <ul class="sub ulfive">
+                            <li><a href="">Editor's Pick</a></li>
+                            <li><a href="">에버랜드 스토리</a></li>
+                            <li><a href="">테마뮤직</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
             <div id="search">
-                <div id="searchone"><a href="#">온라인 예매</a></div>
-                <div id="searchtwo"><a href="#">로그인</a></div>
-                <div id="searchthree"><a href="#">회원가입</a></div>
-                <div id="searchfour"><img src="img/search.png" alt=""></div>
-
+                <div id="searchone" class="hide"><a href="#">온라인 예매</a></div>
+                <div id="searchtwo" class="hide"><a href="#">로그인</a></div>
+                <div id="searchthree" class="hide"><a href="#">회원가입</a></div>
+                <div id="searchfour" class="hide"><img src="img/search.png" alt="search"></div>
+                <div id="hidesearch">
+                    <div id="box">
+                    <input type="search" name="a" >
+                    <input type="image" src="img/search.png" alt="search">
+                    <button id="close">x</button>
+                </div>
+                </div>
+                
             </div>
         </div>
     </div>
 </div>
-
 
 <!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 푸터ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
 <footer>
@@ -112,31 +132,31 @@
     <div class="link_up">
         <h2>Link</h2>
             <div class="link">
-                <a href="#"><p>이용정보</p></a>
-                <a href="#"><p>요금&프로모션</p></a>
-                <a href="#"><p>즐길거리</p></a>
-                <a href="#"><p>멤버십</p></a>
-                <a href="#"><p>에버랜드 더 알아보기</p></a>
+                <p><a href="#">요금&프로모션</a></p>
+                <p><a href="#">이용정보</a></p>
+                <p><a href="#">즐길거리</a></p>
+                <p><a href="#">멤버십</a></p>
+                <p><a href="#">에버랜드 더 알아보기</a></p>
             </div>
     </div>
     <div class="information_up">
         <h2>Information</h2>
             <div class="information">
-                <a href="#"><p>에버랜드 리조트 소개</p></a>
-                <a href="#"><p>이용약관</p></a>
-                <a href="#"><p>이메일주소 무단수집 거부</p></a>
-                <a href="#"><p>채용</p></a>
-                <a href="#"><p>캐스트참여</p></a>
+                <p><a href="#">에버랜드 리조트 소개</a></p>
+                <p><a href="#">이용약관</a></p>
+                <p><a href="#">이메일주소 무단수집 거부</a></p>
+                <p><a href="#">채용</a></p>
+                <p><a href="#">캐스트참여</a></p>
             </div>
     </div>
     <div class="contact_up">
         <h2>Contact</h2>
             <div class="contact">
-                <a href="#"><p>031-320-5000(유료)</p></a>
-                <a href="#"><p>경기도 용인시 처인구 포곡읍 에버랜드로 199 삼성물산(주)</p></a>
-                <a href="#"><p>개인정보처리방침</p></a>
-                <a href="#"><p>방침 개정 안내</p></a>
-                <a href="#"><p>입찰공고</p></a>
+                <p><a href="#">031-320-5000(유료)</a></p>
+                <!-- <p><a href="#">경기도 용인시 처인구 포곡읍 에버랜드로 199 삼성물산(주)</a></p> -->
+                <p><a href="#">개인정보처리방침</a></p>
+                <p><a href="#">방침 개정 안내</a></p>
+                <p><a href="#">입찰공고</a></p>
             </div>
         </div>
     </div>
