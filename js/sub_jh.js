@@ -92,6 +92,9 @@ $(function(){
 
 })
 
+    $('#semi_info').click(function(){
+        $(this).addClass('active');
+    })
 
 function onday(){
     window.location.href='#main'
